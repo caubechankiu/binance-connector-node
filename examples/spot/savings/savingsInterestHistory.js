@@ -8,7 +8,7 @@ const main = async () => {
   let endTime = new Date().getTime();
   for (let i = 0; i < 10; i++) {
     const response = await client.savingsInterestHistory('DAILY', {
-      startTime: endTime - 30 * 24 * 60 * 60 * 1000 + 1,
+      startTime: endTime - 30 * 24 * 60 * 60 * 1000,
       endTime,
       current: 1,
       size: 100,
@@ -34,4 +34,11 @@ const main = async () => {
   //   .catch(error => client.logger.error(error))
 }
 
-main()
+// main()
+
+client.savingsInterestHistory('DAILY', {
+  startTime: 1658293334999,
+  endTime: 1658341751913,
+  current: 1,
+  size: 100,
+}).then(response => console.log(response.data))

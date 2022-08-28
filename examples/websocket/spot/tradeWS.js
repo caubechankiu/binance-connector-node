@@ -20,5 +20,5 @@ const callbacks = {
 }
 
 const wsRef = client.tradeWS('bnbusdt', callbacks)
-setTimeout(() => client.unsubscribe(wsRef), 5000)
+// setTimeout(() => client.unsubscribe(wsRef), 5000)
 // check the output file

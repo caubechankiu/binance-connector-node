@@ -10,7 +10,7 @@ const logger = new Console({
 })
 
 const client = new Spot('', '', {
-  logger
+  logger: console
 })
 
 const callbacks = {
@@ -24,5 +24,5 @@ const callbacks = {
 
 // single pair
 const wsRef = client.tickerWS('bnbusdt', callbacks)
-setTimeout(() => client.unsubscribe(wsRef), 5000)
+// setTimeout(() => client.unsubscribe(wsRef), 5000)
 // check the output file
